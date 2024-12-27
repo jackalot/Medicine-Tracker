@@ -1,5 +1,5 @@
 export default function TextBox() {
     return (
-        <text></text>
+        <input type="text"></input>
     )
 }
