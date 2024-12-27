@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import TextBox from "./TextBox";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -8,6 +8,7 @@ export default function Home() {
         <ul className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Name of medication: 
+            <TextBox></TextBox>
           </li>
           <li className="mb-2">
             How much do you take in the morning?
