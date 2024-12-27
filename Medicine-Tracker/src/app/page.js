@@ -8,15 +8,18 @@ export default function Home() {
         <ul className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Name of medication: 
-            <Input></Input>
+            <Input
+            InputType="text"></Input>
           </li>
           <li className="mb-2">
             How much do you take in the morning?
-            <Input></Input>
+            <Input
+            InputType="number"></Input>
           </li>
           <li>
             How much do you take at night?
-            <Input></Input>
+            <Input
+            InputType="number"></Input>
           </li>
         </ul>
 
