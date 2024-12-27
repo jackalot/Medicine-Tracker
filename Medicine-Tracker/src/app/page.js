@@ -12,9 +12,11 @@ export default function Home() {
           </li>
           <li className="mb-2">
             How much do you take in the morning?
+            <TextBox></TextBox>
           </li>
           <li>
             How much do you take at night?
+            <TextBox></TextBox>
           </li>
         </ul>
 
