@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Input from "./Input";
 import { useState } from "react";
+'use client'
 export default function Home() {
   const [MedicationName, SetMedicationName] = useState("")
   const [MorningPillAmount, SetMorningPillAmount] = useState(0)
