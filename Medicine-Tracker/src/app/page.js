@@ -11,13 +11,13 @@ export default function Home() {
     SetMedicationName(e.target.value)
   }
   function StoreMorningPillAmount (e) {
-    SetMorningPillAmount(e.target.value)
+    SetMorningPillAmount(parseInt(e.target.value))
   }
   function StoreNightPillAmount (e) {
-    SetNightPillAmount(e.target.value)
+    SetNightPillAmount(parseInt(e.target.value))
   }
   function StoreTotalPillAmount (e) {
-    SetTotalPillAmount(e.target.value)
+    SetTotalPillAmount(parseInt(e.target.value))
   }
   function CalculatePills() {
     let totalPills = TotalPillAmount;
