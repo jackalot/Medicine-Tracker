@@ -6,6 +6,7 @@ export default function Home() {
   const [MedicationName, SetMedicationName] = useState("")
   const [MorningPillAmount, SetMorningPillAmount] = useState(0)
   const [NightPillAmount, SetNightPillAmount] = useState(0)
+  const [TotalPillAmount, SetTotalPillAmount] = useState(0)
   function StoreMedicationName (e) {
     SetMedicationName(e.target.value)
   }
@@ -14,6 +15,9 @@ export default function Home() {
   }
   function StoreNightPillAmount (e) {
     SetNightPillAmount(e.target.value)
+  }
+  function StoreTotalPillAmount (e) {
+    SetTotalPillAmount(e.target.value)
   }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -37,6 +41,12 @@ export default function Home() {
             <Input
             InputType="number"
             changeParentState={StoreNightPillAmount}></Input>
+          </li>
+          <li>
+            How many pills do you have left?
+            <Input
+            InputType="number"
+            changeParentState={StoreTotalPillAmount}></Input>
           </li>
         </ul>
 
