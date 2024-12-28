@@ -6,6 +6,15 @@ export default function Home() {
   const [MedicationName, SetMedicationName] = useState("")
   const [MorningPillAmount, SetMorningPillAmount] = useState(0)
   const [NightPillAmount, SetNightPillAmount] = useState(0)
+  function StoreMedicationName (e) {
+    SetMedicationName(e.target.value)
+  }
+  function StoreMorningPillAmount (e) {
+    SetMorningPillAmount(e.target.value)
+  }
+  function StoreNightPillAmount (e) {
+    SetNightPillAmount(e.target.value)
+  }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -14,17 +23,20 @@ export default function Home() {
           <li className="mb-2">
             Name of medication: 
             <Input
-            InputType="text"></Input>
+            InputType="text"
+            changeParentState={StoreMedicationName}></Input>
           </li>
           <li className="mb-2">
             How much do you take in the morning?
             <Input
-            InputType="number"></Input>
+            InputType="number"
+            changeParentState={StoreMorningPillAmount}></Input>
           </li>
           <li>
             How much do you take at night?
             <Input
-            InputType="number"></Input>
+            InputType="number"
+            changeParentState={StoreNightPillAmount}></Input>
           </li>
         </ul>
 
