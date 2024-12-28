@@ -20,27 +20,20 @@ export default function Home() {
     SetTotalPillAmount(e.target.value)
   }
   function CalculatePills() {
-    /*
-    say we have 1 in the morning 4 at night\
-    40 in total pills.
-    totalPills
-    morningTaken
-    nightTaken
-    while(totalPills > 0)
-    {
-      totalPills -= morning dosage
-      morningTaken += morning dosage
-      if(on this iteration, totalPills is still > 0)
-      {
-        totalPills -= night dosage
-        nightTaken += night dosage
-      }
-    }
-     */
     let totalPills = TotalPillAmount;
     let morningTaken = 0;
     let nightTaken = 0;
-    console.log("TotalPills: " + totalPills);
+    while(totalPills > 0)
+      {
+        totalPills -= MorningPillAmount
+        morningTaken += MorningPillAmount
+        if(totalPills  > 0)
+        {
+          totalPills -= NightPillAmount
+          nightTaken += NightPillAmount
+        }
+      }
+      console.log("TotalPills: " + totalPills);
     console.log("MorningTaken: " + morningTaken);
     console.log("NightTaken: " + nightTaken);
   }
