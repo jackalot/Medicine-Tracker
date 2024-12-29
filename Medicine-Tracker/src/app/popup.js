@@ -28,7 +28,7 @@ export default function Popup() {
                   </h3>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Finished calculating your pills, heres the info:
+                      Finished calculating your pills, heres what you put:
                     </p>
                   </div>
                 </div>
