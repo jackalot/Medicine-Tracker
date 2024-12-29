@@ -6,7 +6,7 @@ export default function Popup({
 }) {
   /**Properties: medName, morningAmount, nightAmount, Total**/
   let InitialValues = GetInitialValues();
-  /**Properties: totalPill, morningTaken, nightTaken**/
+  /**Properties: totalPills, morningTaken, nightTaken**/
   let NewValues = GetNewValues();
   console.log(InitialValues.medName);
   if (canShowMethod()) {
@@ -53,7 +53,7 @@ export default function Popup({
                           <strong> {InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You have <strong>{InitialValues.Total}</strong> pill's
+                          You had <strong>{InitialValues.Total}</strong> pill's
                           total
                         </li>
                         <li>
@@ -76,8 +76,8 @@ export default function Popup({
                           <strong>{InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You have <strong>{NewValues.totalPill}</strong> pill's
-                          remaining.
+                          You have <strong>{NewValues.totalPills}</strong>{" "}
+                          pill's remaining.
                         </li>
                         <li>
                           You get <strong>{NewValues.morningTaken}</strong>{" "}
