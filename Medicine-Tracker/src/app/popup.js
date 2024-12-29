@@ -1,4 +1,4 @@
-export default function Popup({ canShowMethod }) {
+export default function Popup({ canShowMethod, HidePopup }) {
   if (canShowMethod()) {
     return (
       <div
