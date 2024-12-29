@@ -28,18 +28,22 @@ export default function Home() {
     let morningTaken = 0;
     let nightTaken = 0;
     // Sort through all pills
-    while (totalPills > 0) {
+    let keepGoing = true;
+    while (totalPills > 0 && keepGoing === true) {
       if (totalPills >= MorningPillAmount) {
         totalPills -= MorningPillAmount;
         if (MorningPillAmount > 0) {
           morningTaken += 1;
         }
       }
-      if (totalPills > 0) {
+      if (totalPills >= NightPillAmount) {
         totalPills -= NightPillAmount;
         if (NightPillAmount > 0) {
           nightTaken += 1;
         }
+      }
+      if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
+        keepGoing = false;
       }
     }
     SetShowPopup(true);
