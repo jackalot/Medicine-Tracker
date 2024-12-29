@@ -54,6 +54,9 @@ export default function Home() {
   function GetPopupStatus() {
     return ShowPopup;
   }
+  function GetInitialValues() {
+    return InitialValues;
+  }
   //hides popup
   function HidePopup() {
     SetShowPopup(false);
@@ -94,7 +97,7 @@ export default function Home() {
         <Popup
           HidePopup={HidePopup}
           canShowMethod={GetPopupStatus}
-          InitialValues={InitialValues}
+          GetInitialValues={GetInitialValues}
         ></Popup>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
