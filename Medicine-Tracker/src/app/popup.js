@@ -44,6 +44,9 @@ export default function Popup() {
                         You take <strong>...</strong> pills each night
                       </li>
                     </ul>
+                    <p className="text-sm text-cyan-700">
+                      The calculation before you run out of medicine:
+                    </p>
                   </div>
                 </div>
               </div>
