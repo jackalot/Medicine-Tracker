@@ -5,6 +5,7 @@ export default function Popup({
   NewValues,
 }) {
   let InitialValues = GetInitialValues();
+  console.log(InitialValues.medName);
   if (canShowMethod()) {
     return (
       <div
@@ -46,7 +47,7 @@ export default function Popup({
                       <ul className="text-sm text-gray-700">
                         <li>
                           The medicine name is:
-                          <strong>{InitialValues.MedicationName}</strong>
+                          <strong> {InitialValues.medName}</strong>
                         </li>
                         <li>
                           You have <strong>...</strong> pill's total
