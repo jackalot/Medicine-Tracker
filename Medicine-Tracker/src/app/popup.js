@@ -5,6 +5,10 @@ export default function Popup({
   NewValues,
 }) {
   let InitialValues = GetInitialValues();
+  /*medName
+  morningAmount
+  nightAmount
+  Total */
   console.log(InitialValues.medName);
   if (canShowMethod()) {
     return (
@@ -50,13 +54,17 @@ export default function Popup({
                           <strong> {InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You have <strong>...</strong> pill's total
+                          You have <strong>{InitialValues.Total}</strong> pill's
+                          total
                         </li>
                         <li>
-                          You take <strong>...</strong> pills each morning
+                          You take{" "}
+                          <strong>{InitialValues.morningAmount}</strong> pills
+                          each morning
                         </li>
                         <li>
-                          You take <strong>...</strong> pills each night
+                          You take <strong>{InitialValues.nightAmount}</strong>{" "}
+                          pills each night
                         </li>
                       </ul>
                       <br></br>
@@ -65,7 +73,8 @@ export default function Popup({
                       </p>
                       <ul className="text-sm text-green-700">
                         <li>
-                          The medicine name is: <strong>...</strong>
+                          The medicine name is:{" "}
+                          <strong>{InitialValues.medName}</strong>
                         </li>
                         <li>
                           You have <strong>...</strong> pill's remaining.
