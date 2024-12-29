@@ -38,7 +38,7 @@ export default function Popup() {
                     class="text-base font-semibold text-gray-900"
                     id="modal-title"
                   >
-                    Deactivate account
+                    Your Medicine Information
                   </h3>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
