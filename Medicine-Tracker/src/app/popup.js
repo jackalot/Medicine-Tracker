@@ -1,9 +1,10 @@
 export default function Popup({
   canShowMethod,
   HidePopup,
-  InitialValues,
+  GetInitialValues,
   NewValues,
 }) {
+  let InitialValues = GetInitialValues();
   if (canShowMethod()) {
     return (
       <div
