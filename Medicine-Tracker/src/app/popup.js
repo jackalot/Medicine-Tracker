@@ -2,9 +2,10 @@ export default function Popup({
   canShowMethod,
   HidePopup,
   GetInitialValues,
-  NewValues,
+  GetNewValues,
 }) {
   let InitialValues = GetInitialValues();
+  let NewValues = GetNewValues();
   /*medName
   morningAmount
   nightAmount
