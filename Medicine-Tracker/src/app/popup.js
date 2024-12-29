@@ -16,6 +16,9 @@ export default function Popup() {
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
+                {/*=======================
+                 This is our ! symbol, surrounded by a circle
+                 =============================*/}
                 <div className="mx-auto flex size-12 grow-0 flex-wrap items-end justify-items-end rounded-full bg-red-100 sm:mx-0 sm:size-10">
                   <div className="text-center size-8 text-red-600">!</div>
                 </div>
@@ -26,6 +29,9 @@ export default function Popup() {
                   >
                     Your Medicine Information
                   </h3>
+                  {/*=======================
+                 Modal text starts here
+                 =============================*/}
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
                       Heres what you put initially:
