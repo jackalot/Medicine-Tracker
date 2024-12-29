@@ -8,7 +8,6 @@ export default function Popup({
   let InitialValues = GetInitialValues();
   /**Properties: totalPills, morningTaken, nightTaken**/
   let NewValues = GetNewValues();
-  console.log(InitialValues.medName);
   if (canShowMethod()) {
     return (
       <div
