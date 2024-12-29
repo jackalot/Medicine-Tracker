@@ -8,7 +8,7 @@ export default function Home() {
   const [MorningPillAmount, SetMorningPillAmount] = useState(0);
   const [NightPillAmount, SetNightPillAmount] = useState(0);
   const [TotalPillAmount, SetTotalPillAmount] = useState(0);
-  const [ShowPopup, SetShowPopup] = useState(false);
+  let ShowPopup = false;
   function StoreMedicationName(e) {
     SetMedicationName(e.target.value);
   }
@@ -41,7 +41,7 @@ export default function Home() {
     console.log("TotalPills: " + totalPills);
     console.log("MorningTaken: " + morningTaken);
     console.log("NightTaken: " + nightTaken);
-    SetShowPopup(true);
+    ShowPopup = true;
   }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -76,7 +76,7 @@ export default function Home() {
             ></Input>
           </li>
         </ul>
-        <Popup></Popup>
+        <Popup canShow={ShowPopup}></Popup>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
