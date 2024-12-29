@@ -53,10 +53,6 @@ export default function Popup({
                           <strong> {InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You had <strong>{InitialValues.Total}</strong> pill's
-                          total
-                        </li>
-                        <li>
                           You take{" "}
                           <strong>{InitialValues.morningAmount}</strong> pills
                           each morning
@@ -64,6 +60,10 @@ export default function Popup({
                         <li>
                           You take <strong>{InitialValues.nightAmount}</strong>{" "}
                           pills each night
+                        </li>
+                        <li>
+                          You had <strong>{InitialValues.Total}</strong> pill's
+                          total
                         </li>
                       </ul>
                       <br></br>
@@ -76,16 +76,16 @@ export default function Popup({
                           <strong>{InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You have <strong>{NewValues.totalPills}</strong>{" "}
-                          pill's remaining.
-                        </li>
-                        <li>
                           You get <strong>{NewValues.morningTaken}</strong>{" "}
                           morning dosages by the time you run out of pills.
                         </li>
                         <li>
                           You get <strong>{NewValues.nightTaken}</strong> night
                           dosages by the time you run out of pills.
+                        </li>
+                        <li>
+                          You have <strong>{NewValues.totalPills}</strong>{" "}
+                          pill's remaining.
                         </li>
                       </ul>
                     </div>
