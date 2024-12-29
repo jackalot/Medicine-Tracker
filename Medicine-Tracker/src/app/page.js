@@ -29,9 +29,11 @@ export default function Home() {
     let nightTaken = 0;
     // Sort through all pills
     while (totalPills > 0) {
-      totalPills -= MorningPillAmount;
-      if (MorningPillAmount > 0) {
-        morningTaken += 1;
+      if (totalPills >= MorningPillAmount) {
+        totalPills -= MorningPillAmount;
+        if (MorningPillAmount > 0) {
+          morningTaken += 1;
+        }
       }
       if (totalPills > 0) {
         totalPills -= NightPillAmount;
