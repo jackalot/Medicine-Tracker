@@ -9,6 +9,7 @@ export default function Home() {
   const [NightPillAmount, SetNightPillAmount] = useState(0);
   const [TotalPillAmount, SetTotalPillAmount] = useState(0);
   const [InitialValues, setInitialValues] = useState({});
+  const [NewValues, setNewValues] = useState({});
   const [ShowPopup, SetShowPopup] = useState(false);
   function StoreMedicationName(e) {
     SetMedicationName(e.target.value);
@@ -48,6 +49,11 @@ export default function Home() {
       morningAmount: MorningPillAmount,
       nightAmount: NightPillAmount,
       Total: TotalPillAmount,
+    });
+    setNewValues({
+      totalPills: totalPills,
+      morningTaken: morningTaken,
+      nightTaken: nightTaken,
     });
   }
   //reveals the popup
