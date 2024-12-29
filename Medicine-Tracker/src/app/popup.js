@@ -56,12 +56,12 @@ export default function Popup() {
                         You have <strong>...</strong> pill's remaining.
                       </li>
                       <li>
-                        You get <strong>...</strong> by the time you run out of
-                        pills.
+                        You get <strong>...</strong> morning dosages by the time
+                        you run out of pills.
                       </li>
                       <li>
-                        You get <strong>...</strong> by the time you run out of
-                        pills.
+                        You get <strong>...</strong> night dosages by the time
+                        you run out of pills.
                       </li>
                     </ul>
                   </div>
