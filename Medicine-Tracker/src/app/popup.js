@@ -76,15 +76,16 @@ export default function Popup({
                           <strong>{InitialValues.medName}</strong>
                         </li>
                         <li>
-                          You have <strong>...</strong> pill's remaining.
+                          You have <strong>{NewValues.totalPill}</strong> pill's
+                          remaining.
                         </li>
                         <li>
-                          You get <strong>...</strong> morning dosages by the
-                          time you run out of pills.
+                          You get <strong>{NewValues.morningTaken}</strong>{" "}
+                          morning dosages by the time you run out of pills.
                         </li>
                         <li>
-                          You get <strong>...</strong> night dosages by the time
-                          you run out of pills.
+                          You get <strong>{NewValues.nightTaken}</strong> night
+                          dosages by the time you run out of pills.
                         </li>
                       </ul>
                     </div>
