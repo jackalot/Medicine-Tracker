@@ -46,6 +46,10 @@ export default function Home() {
         keepGoing = false;
       }
     }
+    let days = 0;
+    if (morningTaken > nightTaken) {
+      days = morningTaken - nightTaken;
+    }
     SetShowPopup(true);
     setInitialValues({
       medName: MedicationName,
@@ -56,6 +60,7 @@ export default function Home() {
     setNewValues({
       totalPills: totalPills,
       morningTaken: morningTaken,
+      dayAmount: days,
       nightTaken: nightTaken,
     });
   }
