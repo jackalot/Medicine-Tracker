@@ -44,7 +44,8 @@ export default function Popup({
                       </p>
                       <ul className="text-sm text-gray-700">
                         <li>
-                          The medicine name is: <strong>...</strong>
+                          The medicine name is:
+                          <strong>{InitialValues.MedicationName}</strong>
                         </li>
                         <li>
                           You have <strong>...</strong> pill's total
