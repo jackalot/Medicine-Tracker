@@ -1,10 +1,8 @@
 export default function Popup({
   canShowMethod,
   HidePopup,
-  MedicationName,
-  MorningPillAmount,
-  NightPillAmount,
-  TotalPillAmount,
+  InitialValues,
+  NewValues,
 }) {
   if (canShowMethod()) {
     return (
