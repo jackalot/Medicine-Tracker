@@ -44,9 +44,26 @@ export default function Popup() {
                         You take <strong>...</strong> pills each night
                       </li>
                     </ul>
-                    <p className="text-sm text-cyan-700">
+                    <br></br>
+                    <p className="text-sm text-green-800">
                       The calculation before you run out of medicine:
                     </p>
+                    <ul className="text-sm text-green-700">
+                      <li>
+                        The medicine name is: <strong>...</strong>
+                      </li>
+                      <li>
+                        You have <strong>...</strong> pill's remaining.
+                      </li>
+                      <li>
+                        You get <strong>...</strong> by the time you run out of
+                        pills.
+                      </li>
+                      <li>
+                        You get <strong>...</strong> by the time you run out of
+                        pills.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
