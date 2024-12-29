@@ -63,6 +63,9 @@ export default function Home() {
   function GetInitialValues() {
     return InitialValues;
   }
+  function GetNewValues() {
+    return NewValues;
+  }
   //hides popup
   function HidePopup() {
     SetShowPopup(false);
