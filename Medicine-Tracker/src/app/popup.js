@@ -25,7 +25,7 @@ export default function Popup({ canShowMethod }) {
                   </div>
                   <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                     <h3
-                      class="text-base font-semibold text-gray-900"
+                      className="text-base font-semibold text-gray-900"
                       id="modal-title"
                     >
                       Your Medicine Information
