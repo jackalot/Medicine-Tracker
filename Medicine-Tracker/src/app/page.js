@@ -40,9 +40,6 @@ export default function Home() {
         }
       }
     }
-    console.log("TotalPills: " + totalPills);
-    console.log("MorningTaken: " + morningTaken);
-    console.log("NightTaken: " + nightTaken);
     SetShowPopup(true);
     setInitialValues({
       medName: MedicationName,
