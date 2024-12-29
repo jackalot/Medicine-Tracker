@@ -30,6 +30,20 @@ export default function Popup() {
                     <p className="text-sm text-gray-500">
                       Finished calculating your pills, heres what you put:
                     </p>
+                    <ul className="text-sm text-gray-700">
+                      <li>
+                        The medicine name is: <strong>...</strong>
+                      </li>
+                      <li>
+                        You have <strong>...</strong> pill's total
+                      </li>
+                      <li>
+                        You take <strong>...</strong> pills each morning
+                      </li>
+                      <li>
+                        You take <strong>...</strong> pills each night
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
