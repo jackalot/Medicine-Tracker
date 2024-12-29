@@ -1,5 +1,5 @@
-export default function Popup(canShow) {
-  if (canShow === true) {
+export default function Popup(canShoMethod) {
+  if (canShoMethod === true) {
     return (
       <div
         className="relative z-10"
