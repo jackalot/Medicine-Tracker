@@ -43,8 +43,13 @@ export default function Home() {
     console.log("NightTaken: " + nightTaken);
     SetShowPopup(true);
   }
+  //reveals the popup
   function GetPopupStatus() {
     return ShowPopup;
+  }
+  //hides popup
+  function HidePopup() {
+    SetShowPopup(false);
   }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
