@@ -1,4 +1,11 @@
-export default function Popup({ canShowMethod, HidePopup }) {
+export default function Popup({
+  canShowMethod,
+  HidePopup,
+  MedicationName,
+  MorningPillAmount,
+  NightPillAmount,
+  TotalPillAmount,
+}) {
   if (canShowMethod()) {
     return (
       <div
