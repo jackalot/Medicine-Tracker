@@ -4,12 +4,10 @@ export default function Popup({
   GetInitialValues,
   GetNewValues,
 }) {
+  /**Properties: medName, morningAmount, nightAmount, Total**/
   let InitialValues = GetInitialValues();
+  /**Properties: totalPill, morningTaken, nightTaken**/
   let NewValues = GetNewValues();
-  /*medName
-  morningAmount
-  nightAmount
-  Total */
   console.log(InitialValues.medName);
   if (canShowMethod()) {
     return (
