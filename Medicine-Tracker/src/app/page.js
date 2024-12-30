@@ -134,28 +134,28 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <ul className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
-            Name of medication:
+            <label>Name of medication:</label>
             <Input
               InputType="text"
               changeParentState={StoreMedicationName}
             ></Input>
           </li>
           <li className="mb-2">
-            How much do you take in the morning?
+            <label>How much do you take in the morning?</label>
             <Input
               InputType="number"
               changeParentState={StoreMorningPillAmount}
             ></Input>
           </li>
           <li>
-            How much do you take at night?
+            <label>How much do you take at night?</label>
             <Input
               InputType="number"
               changeParentState={StoreNightPillAmount}
             ></Input>
           </li>
           <li>
-            How many pills do you have left?
+            <label>How many pills do you have left?</label>
             <Input
               InputType="number"
               changeParentState={StoreTotalPillAmount}
