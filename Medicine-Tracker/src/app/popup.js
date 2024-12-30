@@ -12,10 +12,18 @@ export default function Popup({
   function CreateFile() {
     const OldValueText =
       "Heres what you put initially:\n" +
-      "The medicine name is: \n" +
-      "You take 0 pills each morning\n" +
-      "You take 0 pills each night\n" +
-      "You had 0 pill's total\n";
+      "The medicine name is: " +
+      InitialValues.medName +
+      " \n" +
+      "You take " +
+      InitialValues.morningAmount +
+      " pills each morning\n" +
+      "You take " +
+      InitialValues.nightAmount +
+      " pills each night\n" +
+      "You had " +
+      InitialValues.Total +
+      " pill's total\n";
     let fullText = OldValueText;
     const file = new Blob([OldValueText], {
       type: "text/plain;charset=utf-8",
