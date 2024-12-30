@@ -76,7 +76,7 @@ export default function Home() {
           nightTaken += 1;
         }
       }
-      if (totalPills <= MorningPillAmount || totalPills <= NightPillAmount) {
+      if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
         keepGoing = false;
       }
     }
