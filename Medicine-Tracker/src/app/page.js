@@ -42,6 +42,16 @@ export default function Home() {
       nightTaken: nightTaken,
     });
   }
+  /**CHeck which how much the  */
+  function CalculateDays(morningTaken, nightTaken) {
+    let dayCount = 0;
+    while (morningTaken > 0 || nightTaken > 0) {
+      morningTaken--;
+      nightTaken--;
+      dayCount++;
+    }
+    return dayCount;
+  }
   /**The following two are for our
    * Mornings first
    * and nights first buttons */
@@ -69,9 +79,7 @@ export default function Home() {
       }
     }
     let days = 0;
-    if (morningTaken > nightTaken) {
-      days = morningTaken - nightTaken;
-    }
+    days = CalculateDays(morningTaken, nightTaken);
     SetShowPopup(true);
     UpdateInitialValuesOBJ();
     UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
@@ -99,10 +107,7 @@ export default function Home() {
         keepGoing = false;
       }
     }
-    let days = 0;
-    if (nightTaken > morningTaken) {
-      days = nightTaken - morningTaken;
-    }
+    let days = CalculateDays(nightTaken, morningTaken);
     SetShowPopup(true);
     UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
     UpdateInitialValuesOBJ();
