@@ -23,7 +23,16 @@ export default function Home() {
   function StoreTotalPillAmount(e) {
     SetTotalPillAmount(parseInt(e.target.value));
   }
-  function NewValuesObj(totalPills, morningTaken, dayAmount, nightTaken) {
+  function UpdateInitialValuesOBJ() {
+    setInitialValues({
+      medName: MedicationName,
+      morningAmount: MorningPillAmount,
+      nightAmount: NightPillAmount,
+      Total: TotalPillAmount,
+    });
+  }
+
+  function UpdateNewValuesObj(totalPills, morningTaken, dayAmount, nightTaken) {
     setNewValues({
       totalPills: totalPills,
       morningTaken: morningTaken,
@@ -59,13 +68,8 @@ export default function Home() {
       days = morningTaken - nightTaken;
     }
     SetShowPopup(true);
-    setInitialValues({
-      medName: MedicationName,
-      morningAmount: MorningPillAmount,
-      nightAmount: NightPillAmount,
-      Total: TotalPillAmount,
-    });
-    NewValuesObj(totalPills, morningTaken, days, nightTaken);
+    UpdateInitialValuesOBJ();
+    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
   }
   function CalculatePillsNightsFirst() {
     let totalPills = TotalPillAmount;
@@ -95,13 +99,8 @@ export default function Home() {
       days = nightTaken - morningTaken;
     }
     SetShowPopup(true);
-    NewValuesObj(totalPills, morningTaken, days, nightTaken);
-    setInitialValues({
-      medName: MedicationName,
-      morningAmount: MorningPillAmount,
-      nightAmount: NightPillAmount,
-      Total: TotalPillAmount,
-    });
+    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
+    UpdateInitialValuesOBJ();
   }
   //reveals the popup
   function GetPopupStatus() {
