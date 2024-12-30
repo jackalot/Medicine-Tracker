@@ -141,22 +141,27 @@ export default function Home() {
             ></Input>
           </li>
           <li className="mb-2">
-            <label>How much do you take in the morning?</label>
+            <label htmlFor="MorningPills">
+              How much do you take in the morning?
+            </label>
             <Input
+              id="MorningPills"
               InputType="number"
               changeParentState={StoreMorningPillAmount}
             ></Input>
           </li>
           <li>
-            <label>How much do you take at night?</label>
+            <label htmlFor="NightPills">How much do you take at night?</label>
             <Input
+              id="NightPills"
               InputType="number"
               changeParentState={StoreNightPillAmount}
             ></Input>
           </li>
           <li>
-            <label>How many pills do you have left?</label>
+            <label htmlFor="TotalPills">How many pills do you have left?</label>
             <Input
+              id="TotalPills"
               InputType="number"
               changeParentState={StoreTotalPillAmount}
             ></Input>
