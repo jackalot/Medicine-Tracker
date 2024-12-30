@@ -64,6 +64,47 @@ export default function Home() {
       nightTaken: nightTaken,
     });
   }
+  function CalculatePillsNightsFirst() {
+    let totalPills = TotalPillAmount;
+    let morningTaken = 0;
+    let nightTaken = 0;
+    // Sort through all pills
+    let keepGoing = true;
+    while (totalPills > 0 && keepGoing === true) {
+      if (totalPills >= MorningPillAmount) {
+        totalPills -= MorningPillAmount;
+        if (MorningPillAmount > 0) {
+          morningTaken += 1;
+        }
+      }
+      if (totalPills >= NightPillAmount) {
+        totalPills -= NightPillAmount;
+        if (NightPillAmount > 0) {
+          nightTaken += 1;
+        }
+      }
+      if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
+        keepGoing = false;
+      }
+    }
+    let days = 0;
+    if (morningTaken > nightTaken) {
+      days = morningTaken - nightTaken;
+    }
+    SetShowPopup(true);
+    setInitialValues({
+      medName: MedicationName,
+      morningAmount: MorningPillAmount,
+      nightAmount: NightPillAmount,
+      Total: TotalPillAmount,
+    });
+    setNewValues({
+      totalPills: totalPills,
+      morningTaken: morningTaken,
+      dayAmount: days,
+      nightTaken: nightTaken,
+    });
+  }
   //reveals the popup
   function GetPopupStatus() {
     return ShowPopup;
@@ -126,7 +167,7 @@ export default function Home() {
           </a>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            onClick={CalculatePillsMorningsFirst}
+            onClick={CalculatePillsNightsFirst}
           >
             Calculate Medication (Nights First)
           </a>
