@@ -42,6 +42,9 @@ export default function Home() {
       nightTaken: nightTaken,
     });
   }
+  /**The following two are for our
+   * Mornings first
+   * and nights first buttons */
   function CalculatePillsMorningsFirst() {
     let totalPills = TotalPillAmount;
     let morningTaken = 0;
