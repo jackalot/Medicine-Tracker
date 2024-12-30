@@ -24,8 +24,15 @@ export default function Popup({
       "You had " +
       InitialValues.Total +
       " pill's total\n";
+    const NewValuesText =
+      "\nThe calculation before you run out of medicine:\n" +
+      "The medicine name is:\n" +
+      "You get 0 morning dosages by the time you run out of pills.\n" +
+      "You get 0 night dosages by the time you run out of pills.\n" +
+      "You get 0 full day(s) of medication by the time you run out of pills.\n" +
+      "You have 2 pill's remaining.\n";
     let fullText = OldValueText;
-    const file = new Blob([OldValueText], {
+    const file = new Blob([OldValueText + NewValuesText], {
       type: "text/plain;charset=utf-8",
     });
     saveAs(file, "Medication_Info.txt");
