@@ -74,7 +74,6 @@ export default function Home() {
   function GetNewValues() {
     return NewValues;
   }
-  //hides popup
   function HidePopup() {
     SetShowPopup(false);
   }
@@ -118,11 +117,18 @@ export default function Home() {
           GetNewValues={GetNewValues}
         ></Popup>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <p>What dosage will you have first, morning, or night?</p>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
             onClick={CalculatePillsMorningsFirst}
           >
             Calculate Medication (Mornings First)
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            onClick={CalculatePillsMorningsFirst}
+          >
+            Calculate Medication (Nights First)
           </a>
         </div>
       </main>
