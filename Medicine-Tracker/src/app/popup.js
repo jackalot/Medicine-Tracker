@@ -37,6 +37,9 @@ export default function Popup({
       "You get " +
       NewValues.dayAmount +
       " full day(s) of medication by the time you run out of pills.\n" +
+      "You get " +
+      NewValues.weekAmount +
+      " full week(s) of medication by the time you run out of pills.\n" +
       "You have " +
       NewValues.totalPills +
       " pill's remaining.\n";
