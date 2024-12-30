@@ -138,6 +138,7 @@ export default function Home() {
             <Input
               InputType="text"
               changeParentState={StoreMedicationName}
+              placeholder={"Medication name"}
             ></Input>
           </li>
           <li className="mb-2">
@@ -148,6 +149,7 @@ export default function Home() {
               id="MorningPills"
               InputType="number"
               changeParentState={StoreMorningPillAmount}
+              placeholder={2}
             ></Input>
           </li>
           <li>
@@ -156,6 +158,7 @@ export default function Home() {
               id="TotalPills"
               InputType="number"
               changeParentState={StoreTotalPillAmount}
+              placeholder={10}
             ></Input>
           </li>
           <li>
@@ -164,6 +167,7 @@ export default function Home() {
               id="NightPills"
               InputType="number"
               changeParentState={StoreNightPillAmount}
+              placeholder={3}
             ></Input>
           </li>
         </ul>
