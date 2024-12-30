@@ -125,6 +125,11 @@ export default function Popup({
                           day(s) of medication by the time you run out of pills.
                         </li>
                         <li>
+                          You get <strong>{NewValues.weekAmount}</strong> full
+                          week(s) of medication by the time you run out of
+                          pills.
+                        </li>
+                        <li>
                           You have <strong>{NewValues.totalPills}</strong>{" "}
                           pill's remaining.
                         </li>
