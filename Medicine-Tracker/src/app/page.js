@@ -23,6 +23,14 @@ export default function Home() {
   function StoreTotalPillAmount(e) {
     SetTotalPillAmount(parseInt(e.target.value));
   }
+  function NewValuesObj(totalPills, morningTaken, dayAmount, nightTaken) {
+    setNewValues({
+      totalPills: totalPills,
+      morningTaken: morningTaken,
+      dayAmount: dayAmount,
+      nightTaken: nightTaken,
+    });
+  }
   function CalculatePillsMorningsFirst() {
     let totalPills = TotalPillAmount;
     let morningTaken = 0;
@@ -57,12 +65,7 @@ export default function Home() {
       nightAmount: NightPillAmount,
       Total: TotalPillAmount,
     });
-    setNewValues({
-      totalPills: totalPills,
-      morningTaken: morningTaken,
-      dayAmount: days,
-      nightTaken: nightTaken,
-    });
+    NewValuesObj(totalPills, morningTaken, days, nightTaken);
   }
   function CalculatePillsNightsFirst() {
     let totalPills = TotalPillAmount;
@@ -92,17 +95,12 @@ export default function Home() {
       days = nightTaken - morningTaken;
     }
     SetShowPopup(true);
+    NewValuesObj(totalPills, morningTaken, days, nightTaken);
     setInitialValues({
       medName: MedicationName,
       morningAmount: MorningPillAmount,
       nightAmount: NightPillAmount,
       Total: TotalPillAmount,
-    });
-    setNewValues({
-      totalPills: totalPills,
-      morningTaken: morningTaken,
-      dayAmount: days,
-      nightTaken: nightTaken,
     });
   }
   //reveals the popup
