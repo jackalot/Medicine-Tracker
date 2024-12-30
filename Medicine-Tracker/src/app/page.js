@@ -23,6 +23,7 @@ export default function Home() {
   function StoreTotalPillAmount(e) {
     SetTotalPillAmount(parseInt(e.target.value));
   }
+  /**The Initial Values when User types in the fields, updates each button click */
   function UpdateInitialValuesOBJ() {
     setInitialValues({
       medName: MedicationName,
@@ -31,7 +32,8 @@ export default function Home() {
       Total: TotalPillAmount,
     });
   }
-
+  /**The new values when we calculate how many pills we have after
+   * clicking one of our buttons */
   function UpdateNewValuesObj(totalPills, morningTaken, dayAmount, nightTaken) {
     setNewValues({
       totalPills: totalPills,
