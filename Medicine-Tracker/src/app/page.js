@@ -34,12 +34,19 @@ export default function Home() {
   }
   /**The new values when we calculate how many pills we have after
    * clicking one of our buttons */
-  function UpdateNewValuesObj(totalPills, morningTaken, dayAmount, nightTaken) {
+  function UpdateNewValuesObj(
+    totalPills,
+    morningTaken,
+    dayAmount,
+    nightTaken,
+    weeks
+  ) {
     setNewValues({
       totalPills: totalPills,
       morningTaken: morningTaken,
       dayAmount: dayAmount,
       nightTaken: nightTaken,
+      weekAmount: weeks,
     });
   }
   /**Check which how much the  */
@@ -82,9 +89,11 @@ export default function Home() {
     }
     let days = 0;
     days = CalculateDays(morningTaken, nightTaken);
+    let weeks = days / 7;
+    weeks = Math.floor(weeks);
     SetShowPopup(true);
     UpdateInitialValuesOBJ();
-    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
+    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken, weeks);
   }
   function CalculatePillsNightsFirst() {
     let totalPills = TotalPillAmount;
@@ -112,8 +121,10 @@ export default function Home() {
       }
     }
     let days = CalculateDays(nightTaken, morningTaken);
+    let weeks = days / 7;
+    weeks = Math.floor(weeks);
     SetShowPopup(true);
-    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
+    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken, weeks);
     UpdateInitialValuesOBJ();
   }
   //reveals the popup
