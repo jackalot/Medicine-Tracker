@@ -62,12 +62,14 @@ export default function Home() {
     // Sort through all pills
     let keepGoing = true;
     while (totalPills > 0 && keepGoing === true) {
+      /* Check the morning pills first! */
       if (totalPills >= MorningPillAmount) {
         totalPills -= MorningPillAmount;
         if (MorningPillAmount > 0) {
           morningTaken += 1;
         }
       }
+      /* Check the nights pills last! */
       if (totalPills >= NightPillAmount) {
         totalPills -= NightPillAmount;
         if (NightPillAmount > 0) {
@@ -91,12 +93,14 @@ export default function Home() {
     // Sort through all pills
     let keepGoing = true;
     while (totalPills > 0 && keepGoing === true) {
+      /* Check the night pills first! */
       if (totalPills >= NightPillAmount) {
         totalPills -= NightPillAmount;
         if (NightPillAmount > 0) {
           nightTaken += 1;
         }
       }
+      /* Check the morning pills last! */
       if (totalPills >= MorningPillAmount) {
         totalPills -= MorningPillAmount;
         if (MorningPillAmount > 0) {
