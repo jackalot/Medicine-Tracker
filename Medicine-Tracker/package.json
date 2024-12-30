@@ -1,6 +1,7 @@
 {
   "name": "medicine-tracker",
   "version": "0.1.0",
+  "homepage": "https://jackalot.github.io/medicine-tracker",
   "private": true,
   "scripts": {
     "dev": "next dev",
