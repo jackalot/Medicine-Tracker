@@ -71,16 +71,16 @@ export default function Home() {
     // Sort through all pills
     let keepGoing = true;
     while (totalPills > 0 && keepGoing === true) {
-      if (totalPills >= MorningPillAmount) {
-        totalPills -= MorningPillAmount;
-        if (MorningPillAmount > 0) {
-          morningTaken += 1;
-        }
-      }
       if (totalPills >= NightPillAmount) {
         totalPills -= NightPillAmount;
         if (NightPillAmount > 0) {
           nightTaken += 1;
+        }
+      }
+      if (totalPills >= MorningPillAmount) {
+        totalPills -= MorningPillAmount;
+        if (MorningPillAmount > 0) {
+          morningTaken += 1;
         }
       }
       if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
@@ -88,8 +88,8 @@ export default function Home() {
       }
     }
     let days = 0;
-    if (morningTaken > nightTaken) {
-      days = morningTaken - nightTaken;
+    if (nightTaken > morningTaken) {
+      days = nightTaken - morningTaken;
     }
     SetShowPopup(true);
     setInitialValues({
