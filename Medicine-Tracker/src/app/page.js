@@ -42,6 +42,22 @@ export default function Home() {
       nightTaken: nightTaken,
     });
   }
+  function ValidateNums() {
+    let numAttempt = 0;
+    let success = false;
+    try {
+      parseInt(TotalPillAmount);
+      numAttempt++;
+      parseInt(NightPillAmount);
+      numAttempt++;
+      parseInt(MorningPillAmount);
+      numAttempt++;
+      success = true;
+    } catch (e) {
+      window.prompt("please put a number");
+    }
+    return success;
+  }
   /**CHeck which how much the  */
   function CalculateDays(morningTaken, nightTaken) {
     let dayCount = 0;
@@ -56,35 +72,38 @@ export default function Home() {
    * Mornings first
    * and nights first buttons */
   function CalculatePillsMorningsFirst() {
-    let totalPills = TotalPillAmount;
-    let morningTaken = 0;
-    let nightTaken = 0;
-    // Sort through all pills
-    let keepGoing = true;
-    while (totalPills > 0 && keepGoing === true) {
-      /* Check the morning pills first! */
-      if (totalPills >= MorningPillAmount) {
-        totalPills -= MorningPillAmount;
-        if (MorningPillAmount > 0) {
-          morningTaken += 1;
+    let result = ValidateNums();
+    if (result === true) {
+      let totalPills = TotalPillAmount;
+      let morningTaken = 0;
+      let nightTaken = 0;
+      // Sort through all pills
+      let keepGoing = true;
+      while (totalPills > 0 && keepGoing === true) {
+        /* Check the morning pills first! */
+        if (totalPills >= MorningPillAmount) {
+          totalPills -= MorningPillAmount;
+          if (MorningPillAmount > 0) {
+            morningTaken += 1;
+          }
+        }
+        /* Check the nights pills last! */
+        if (totalPills >= NightPillAmount) {
+          totalPills -= NightPillAmount;
+          if (NightPillAmount > 0) {
+            nightTaken += 1;
+          }
+        }
+        if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
+          keepGoing = false;
         }
       }
-      /* Check the nights pills last! */
-      if (totalPills >= NightPillAmount) {
-        totalPills -= NightPillAmount;
-        if (NightPillAmount > 0) {
-          nightTaken += 1;
-        }
-      }
-      if (totalPills <= MorningPillAmount && totalPills <= NightPillAmount) {
-        keepGoing = false;
-      }
+      let days = 0;
+      days = CalculateDays(morningTaken, nightTaken);
+      SetShowPopup(true);
+      UpdateInitialValuesOBJ();
+      UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
     }
-    let days = 0;
-    days = CalculateDays(morningTaken, nightTaken);
-    SetShowPopup(true);
-    UpdateInitialValuesOBJ();
-    UpdateNewValuesObj(totalPills, morningTaken, days, nightTaken);
   }
   function CalculatePillsNightsFirst() {
     let totalPills = TotalPillAmount;
