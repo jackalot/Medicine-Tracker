@@ -151,19 +151,19 @@ export default function Home() {
             ></Input>
           </li>
           <li>
-            <label htmlFor="NightPills">How much do you take at night?</label>
-            <Input
-              id="NightPills"
-              InputType="number"
-              changeParentState={StoreNightPillAmount}
-            ></Input>
-          </li>
-          <li>
             <label htmlFor="TotalPills">How many pills do you have left?</label>
             <Input
               id="TotalPills"
               InputType="number"
               changeParentState={StoreTotalPillAmount}
+            ></Input>
+          </li>
+          <li>
+            <label htmlFor="NightPills">How much do you take at night?</label>
+            <Input
+              id="NightPills"
+              InputType="number"
+              changeParentState={StoreNightPillAmount}
             ></Input>
           </li>
         </ul>
